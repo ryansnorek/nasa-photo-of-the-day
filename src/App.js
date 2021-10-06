@@ -1,25 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
-import axios from 'axios'
 import TimeTravel from './components/TimeTravel'
-import { API_KEY } from './constants'
+
 
 function App() {
 
-  const [nasaData, setNasaData] = useState([])
-
-  useEffect(() => {
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
-      .then(res => {
-        // console.log(res.data)
-        setNasaData(res.data)
-      })
-      .catch(err => console.log(`Error: ${err}`))
-  }, [])
-
+  function randomDate() {
+    const randomYear = String(Math.floor(Math.random() * (1999 - 2020 + 1) + 2020))
+    const randomMonth = String(Math.floor(Math.random() * (0 - 12 + 1) + 12))
+    const randomDay = String(Math.floor(Math.random() * (0 - 29 + 1) + 29))
+    return `${randomYear}-${randomMonth}-${randomDay}`
+    
+}
   return (
     <div className="App">
-      <TimeTravel data={nasaData} setData={setNasaData}/>
+      <TimeTravel randomDate={randomDate}/>
     </div>
   );
 }
