@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Menu(props) {
+export default function Launch(props) {
 
     const { data } = props
 
@@ -9,6 +9,8 @@ export default function Menu(props) {
             <h1>NASA</h1>
             <button>Launch</button>
             <h3>{data.title}</h3>
+            <p>{data.explanation}</p>
+            <img src={data.url} alt={data.title}></img>
         </div>
     )
 }

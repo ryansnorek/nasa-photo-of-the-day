@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios'
-import Menu from './components/Menu'
+import Launch from './components/Launch'
 
 const API_KEY = 'bEEfm4HBhgVq80g2xiSdS5vK3hnVbQqJQeBOsID1'
 
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <Menu data={nasaData}/>
+      <Launch data={nasaData}/>
     </div>
   );
 }
