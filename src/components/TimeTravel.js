@@ -20,7 +20,7 @@ export default function TimeTravel(props) {
     return (
         <div>
             <h1>NASA</h1>
-            <h5>{nasaData.date}</h5>
+            <h4 className='date'>{nasaData.date}</h4>
             <button onClick={() => setDate(randomDate())}>Time Travel</button>
             <h4>{nasaData.title}</h4>
             <img src={nasaData.url} alt={nasaData.title}></img>

@@ -6,7 +6,6 @@ export const StyledTimeTravel = styled.div`
         font-family: sans-serif;
         background-color: ${props => props.theme.spaceGrey};
         margin: 0 auto;
-        
     }
 
     h1 {
@@ -14,8 +13,12 @@ export const StyledTimeTravel = styled.div`
         padding-top: 12%;
     }
 
-    h4, h5{
+    h4 { 
         padding: 2%;
+    }
+
+    .date {
+        font-family: monospace;
     }
 
     button {
@@ -29,7 +32,7 @@ export const StyledTimeTravel = styled.div`
 
     p {
         line-height: 1.5;
-        padding: 2% 12% 12% 12%;
+        padding: 2% 11% 12% 11%;
     }
 
     img {
