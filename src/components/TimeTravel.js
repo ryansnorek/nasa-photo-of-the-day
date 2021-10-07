@@ -1,16 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { API_KEY, todaysDate } from '../constants'
-import styled from 'styled-components'
-
-const StyledTimeTravel = styled.div`
-    * {
-        color: #4f4f4;
-        font-family: sans-serif;
-    }
-`
-
-
 
 export default function TimeTravel(props) {
     const { randomDate } = props
@@ -29,14 +19,12 @@ export default function TimeTravel(props) {
 
     return (
         <div>
-            <StyledTimeTravel>
-                <h1>NASA</h1>
-                <button onClick={() => setDate(randomDate())}>Time Travel</button>
-                <p>{nasaData.date}</p>
-                <h3>{nasaData.title}</h3>
-                <p>{nasaData.explanation}</p>
-                <img src={nasaData.url} alt={nasaData.title}></img>
-            </StyledTimeTravel>
+            <h1>NASA</h1>
+            <h5>{nasaData.date}</h5>
+            <button onClick={() => setDate(randomDate())}>Time Travel</button>
+            <h4>{nasaData.title}</h4>
+            <img src={nasaData.url} alt={nasaData.title}></img>
+            <p>{nasaData.explanation}</p>
         </div>
     )
 }
